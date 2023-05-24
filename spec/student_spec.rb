@@ -9,18 +9,23 @@ RSpec.describe Student do
     
       it 'has a name' do
         student1 = Student.new({name: "Morgan", age: 21})
-        student2 = Student.new({name: "Jordan", age: 29})  
         expect(student1.name).to eq("Morgan")
-        expect(student1.name).to eq("Jordan")
       end
-    end
+        
+     
+      it 'has an other name' do
+      student2 = Student.new({name: "Jordan", age: 29})  
+      expect(student2.name).to eq("Jordan")
+      end
 
     it 'has an age' do
         student1 = Student.new({name: "Morgan", age: 21})
-        student2 = Student.new({name: "Jordan", age: 29})  
         expect(student1.age).to eq(21)
-        expect(student1.age).to eq(29)
-      end
+    end
+        
+    it 'has an other age' do
+        student2 = Student.new({name: "Jordan", age: 29}) 
+        expect(student2.age).to eq(29)
     end
     
       it 'has scores' do
@@ -38,6 +43,6 @@ RSpec.describe Student do
         student1 = Student.new({name: "Morgan", age: 21})
         student1.log_scores(80)
         student1.log_scores(90)
-        expect(student1.grade).to eq(90)
+        expect(student1.grade).to eq(85)
       end   
 end

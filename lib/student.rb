@@ -13,4 +13,4 @@ class Student
       @scores.sum.fdiv(@scores.count)
     end
   end
-end
+
